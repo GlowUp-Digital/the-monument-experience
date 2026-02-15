@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/the-monument-experience/static/css/main.f12c67d7.css",
+    "main.js": "/the-monument-experience/static/js/main.35444200.js",
+    "index.html": "/the-monument-experience/index.html",
+    "main.f12c67d7.css.map": "/the-monument-experience/static/css/main.f12c67d7.css.map",
+    "main.35444200.js.map": "/the-monument-experience/static/js/main.35444200.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f12c67d7.css",
+    "static/js/main.35444200.js"
+  ]
+}
