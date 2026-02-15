@@ -1,0 +1,177 @@
+/* 1. Main Container - No longer forcing flex on everything */
+.monument-home {
+    background-color: #121212;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 2. Hero Section - Keeps your exact previous centered layout */
+.hero-monument {
+    height: 100vh; /* Takes up exactly one full screen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10%;
+    box-sizing: border-box;
+}
+
+.subtitle {
+    display: block;
+    color: #A67C52;
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.hero-monument h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+    margin: 0;
+    line-height: 1.1;
+}
+
+.hero-monument p {
+    color: #D1D1D1;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 30px auto;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.scroll-indicator {
+    margin-top: 80px;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: rgba(209, 209, 209, 0.4);
+    border-left: 1px solid #A67C52;
+    padding-left: 15px;
+}
+
+/* 3. New Content Section - Sits naturally below the Hero */
+.curation-section {
+    padding: 150px 10%;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+}
+
+.curation-content {
+    max-width: 900px;
+    width: 100%;
+}
+
+.curation-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.curation-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(209, 209, 209, 0.8);
+}
+
+/* 4. Stat Grid - For that "Architectural" feel */
+.stat-grid {
+    display: flex;
+    gap: 80px;
+    margin-top: 80px;
+}
+
+.stat-box span {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #A67C52;
+    display: block;
+    line-height: 1;
+}
+
+.stat-box p {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(209, 209, 209, 0.5);
+    margin-top: 15px;
+}
+
+@keyframes monumentFade {
+    from { opacity: 0; transform: translateY(30px); filter: blur(10px); }
+    to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+.hero-monument h1 {
+    animation: monumentFade 1.5s ease-out forwards;
+}
+
+.hero-monument p {
+    animation: monumentFade 1.5s ease-out 0.5s forwards; /* Starts 0.5s later */
+    opacity: 0; /* Hidden initially */
+}
+
+/* Legacy Section Styling */
+.legacy-section {
+    padding: 100px 10% 150px 10%;
+    background-color: #121212;
+    text-align: center;
+}
+
+.legacy-header {
+    margin-bottom: 80px;
+}
+
+.legacy-timeline {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+}
+
+.timeline-item {
+    flex: 1;
+    padding-top: 30px;
+    border-top: 1px solid rgba(166, 124, 82, 0.2);
+}
+
+.timeline-item.highlight {
+    border-top: 1px solid #A67C52;
+}
+
+.year {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    color: #A67C52;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.timeline-item p {
+    font-size: 0.9rem;
+    color: rgba(209, 209, 209, 0.7);
+    line-height: 1.6;
+}
+
+.vault-action {
+    margin-top: 100px;
+}
+
+.cta-bronze {
+    background: transparent;
+    border: 1px solid #A67C52;
+    color: #A67C52;
+    padding: 18px 40px;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.cta-bronze:hover {
+    background: #A67C52;
+    color: #121212;
+    box-shadow: 0 0 20px rgba(166, 124, 82, 0.4);
+}

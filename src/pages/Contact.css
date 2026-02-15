@@ -1,0 +1,268 @@
+.monument-contact {
+    background-color: #121212;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 10% 60px 10%;
+    box-sizing: border-box;
+}
+
+.contact-inner {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.monument-form {
+    margin-top: 50px;
+    text-align: left;
+}
+
+.input-row {
+    display: flex;
+    gap: 30px;
+}
+
+.input-group {
+    flex: 1;
+    margin-bottom: 40px;
+}
+
+.input-group label {
+    display: block;
+    color: #A67C52;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(166, 124, 82, 0.3);
+    color: #D1D1D1;
+    padding: 10px 0;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.4s ease;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-bottom: 1px solid #A67C52;
+}
+
+.monument-btn {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #A67C52;
+    color: #A67C52;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.monument-btn:hover {
+    background: #A67C52;
+    color: #121212;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .input-row { flex-direction: column; gap: 0; }
+}
+
+.input-group select {
+    appearance: none; /* Removes default browser arrow */
+    background-color: #1a1a1a !important; /* Slightly lighter than background */
+    color: #D1D1D1 !important;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+/* This targets the actual dropdown list options */
+.input-group select option {
+    background-color: #1a1a1a;
+    color: #D1D1D1;
+}
+
+/* Adding a custom bronze arrow for the dropdown */
+.input-group {
+    position: relative;
+}
+
+.input-group select:after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    color: #A67C52;
+    pointer-events: none;
+}
+
+.form-step {
+    animation: monumentFade 0.8s ease-out;
+}
+
+.form-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.back-link {
+    color: rgba(209, 209, 209, 0.4);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #A67C52;
+}
+
+@keyframes monumentFade {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Container to push buttons to edges */
+.form-nav-monument {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px; /* More breathing room */
+    width: 100%;
+}
+
+/* Styled Back Button */
+.nav-btn-back {
+    background: transparent;
+    border: none;
+    color: rgba(209, 209, 209, 0.5);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav-btn-back:hover {
+    color: #A67C52;
+    transform: translateX(-5px); /* Subtle physical movement */
+}
+
+/* Ensure the primary button doesn't shrink */
+.monument-btn {
+    min-width: 200px;
+}
+
+/* Progress Indicator Size Increase */
+.subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.button-row {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+    margin-top: 50px;
+    width: 100%;
+}
+
+/* Base style for both buttons to ensure equal size */
+.btn-primary, .btn-secondary {
+    flex: 1; /* This makes them equal width */
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    border: 1px solid #A67C52;
+    height: 65px; /* Fixed height for consistency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Color differences */
+.btn-primary {
+    background: #A67C52;
+    color: #121212;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: #A67C52;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #A67C52;
+    opacity: 0.6;
+}
+
+.btn-secondary:hover {
+    opacity: 1;
+    background: rgba(166, 124, 82, 0.1);
+}
+
+/* Mobile: Stack them but keep same size */
+@media (max-width: 768px) {
+    .button-row {
+        flex-direction: column;
+    }
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.btn-primary, .btn-secondary {
+    flex: 1; /* Equal width blocks */
+    height: 55px;
+    border: 1px solid #A67C52;
+    background: transparent;
+    color: #A67C52;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background: #A67C52;
+    color: #121212;
+}
+
+/* Fix for Mobile View */
+@media (max-width: 480px) {
+    .button-row {
+        gap: 10px;
+    }
+    .btn-primary, .btn-secondary {
+        font-size: 0.7rem; /* Smaller text for tiny screens */
+        letter-spacing: 1px;
+    }
+    .monument-contact h1 {
+        font-size: 1.5rem; /* Prevent title cutoff */
+    }
+}

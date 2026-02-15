@@ -1,0 +1,104 @@
+.monument-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(18,18,18,1) 0%, rgba(18,18,18,0) 100%);
+    box-sizing: border-box;
+}
+
+.nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #A67C52;
+    letter-spacing: 4px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #D1D1D1;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #A67C52;
+}
+
+.cta-bronze {
+    border: 1px solid #A67C52;
+    padding: 12px 25px;
+    transition: all 0.4s ease !important;
+}
+
+.cta-bronze:hover {
+    background-color: #A67C52;
+    color: #121212 !important;
+}
+
+/* Base Navigation Styles */
+.monument-navbar {
+    display: flex;
+    flex-direction: column; /* Stacks items: Logo top, Tabs bottom */
+    align-items: center;
+    padding: 30px 20px;
+    background: #121212;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(166, 124, 82, 0.1);
+}
+
+/* Logo Styling - Centered by default */
+.nav-logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #A67C52;
+    text-decoration: none;
+    letter-spacing: 4px;
+    margin-bottom: 20px; /* Space between logo and the links below */
+}
+
+/* Tabs Styling - Centered and Spaced */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Keeps tabs from cutting off on tiny screens */
+}
+
+.nav-links a {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #D1D1D1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #A67C52;
+}
+
+/* Desktop View: Return to Horizontal Layout */
+@media (min-width: 768px) {
+    .monument-navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 40px 10%;
+    }
+    
+    .nav-logo a {
+        margin-bottom: 0;
+    }
+}

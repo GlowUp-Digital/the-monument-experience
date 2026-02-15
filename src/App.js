@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import EntranceSequence from './components/EntranceSequence';
+import Home from './pages/Home';
+import Philosophy from './pages/Philosophy';
+import Contact from './pages/Contact';
 import './App.css';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-wrapper">
+      {loading ? (
+        <EntranceSequence onComplete={() => setLoading(false)} />
+      ) : (
+        /* The fragment below ensures everything renders once loading is false */
+        <div className="fade-in-content">
+          <Navbar />
+          <main className="content-container">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/philosophy" element={<Philosophy />} />
+              <Route path="/contact" element={<Contact />} />
+              {/* Fallback to Home if path is wrong */}
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      )}
     </div>
   );
 }
